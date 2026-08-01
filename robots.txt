@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lipuboss.github.io/AAA-Gaming-Website/sitemap.xml
