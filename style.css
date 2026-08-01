@@ -1,0 +1,379 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#050505;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+#bg-video{
+    position:fixed;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    z-index:-3;
+}
+
+.overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.72);
+    z-index:-2;
+}
+
+#loader{
+    position:fixed;
+    inset:0;
+    background:#000;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.eye{
+    width:130px;
+    height:130px;
+    border-radius:50%;
+    border:5px solid #ff0000;
+    box-shadow:0 0 20px red,0 0 50px red;
+    animation:spin 2s linear infinite;
+}
+
+#loader h2{
+    margin-top:20px;
+    color:#ff2d2d;
+    letter-spacing:4px;
+    text-shadow:0 0 20px red;
+}
+
+@keyframes spin{
+    100%{transform:rotate(360deg);}
+}
+
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    padding:18px 8%;
+    backdrop-filter:blur(12px);
+    background:rgba(255,255,255,.06);
+    z-index:1000;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+    color:#ff2d2d;
+    text-shadow:0 0 20px red;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:28px;
+}
+
+nav ul li a{
+    color:#fff;
+    text-decoration:none;
+    transition:.4s;
+}
+
+nav ul li a:hover{
+    color:#ff2d2d;
+    text-shadow:0 0 15px red;
+}
+
+.menu-btn{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:100px 20px;
+}
+
+.hero h4{
+    color:#ff4444;
+    letter-spacing:5px;
+}
+
+.hero h1{
+    font-size:70px;
+    margin:20px 0;
+    text-shadow:0 0 25px red;
+}
+
+.hero p{
+    max-width:700px;
+    opacity:.9;
+    font-size:20px;
+}
+
+.hero-btns{
+    margin-top:40px;
+}
+
+.btn,.btn2{
+    display:inline-block;
+    padding:15px 35px;
+    border-radius:40px;
+    text-decoration:none;
+    margin:10px;
+    transition:.4s;
+}
+
+.btn{
+    background:#ff2d2d;
+    color:#fff;
+    box-shadow:0 0 25px red;
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 50px red;
+}
+
+.btn2{
+    border:2px solid #ff2d2d;
+    color:#fff;
+}
+
+.btn2:hover{
+    background:#ff2d2d;
+}
+
+section{
+    padding:90px 8%;
+}
+
+section h2{
+    text-align:center;
+    margin-bottom:35px;
+    font-size:38px;
+    color:#ff4444;
+}
+
+.search-box{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.search-box input{
+    width:320px;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:rgba(255,255,255,.08);
+    color:#fff;
+}
+
+.search-box button{
+    padding:15px 30px;
+    border:none;
+    border-radius:10px;
+    background:#ff2d2d;
+    color:#fff;
+    cursor:pointer;
+    box-shadow:0 0 20px red;
+}
+
+.player-card{
+    max-width:500px;
+    margin:40px auto;
+    padding:30px;
+    border-radius:20px;
+    backdrop-filter:blur(15px);
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.1);
+    box-shadow:0 0 30px rgba(255,0,0,.4);
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.stats .box{
+    text-align:center;
+    padding:35px;
+    border-radius:20px;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(15px);
+    transition:.4s;
+}
+
+.stats .box:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 35px red;
+}
+
+.counter{
+    color:#ff2d2d;
+    font-size:42px;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.gallery img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:15px;
+    transition:.5s;
+    border:2px solid rgba(255,255,255,.1);
+    box-shadow:0 0 20px rgba(255,0,0,.2);
+}
+
+.gallery img:hover{
+    transform:scale(1.08);
+    box-shadow:0 0 35px red;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    overflow:hidden;
+    border-radius:15px;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(15px);
+}
+
+table th{
+    background:#ff2d2d;
+    padding:18px;
+}
+
+table td{
+    padding:18px;
+    text-align:center;
+    border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+table tr:hover{
+    background:rgba(255,255,255,.08);
+}
+
+form{
+    max-width:700px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+form input,form textarea{
+    padding:18px;
+    border:none;
+    outline:none;
+    border-radius:12px;
+    background:rgba(255,255,255,.08);
+    color:#fff;
+}
+
+form textarea{
+    min-height:180px;
+    resize:none;
+}
+
+form button{
+    padding:18px;
+    border:none;
+    cursor:pointer;
+    border-radius:12px;
+    background:#ff2d2d;
+    color:white;
+    font-size:18px;
+    box-shadow:0 0 20px red;
+}
+
+#musicBtn{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:#ff2d2d;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    font-size:24px;
+    box-shadow:0 0 25px red;
+    z-index:999;
+}
+
+footer{
+    text-align:center;
+    padding:40px 20px;
+    background:#050505;
+    border-top:1px solid rgba(255,255,255,.1);
+}
+
+footer h3{
+    color:#ff2d2d;
+    margin-bottom:10px;
+}
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#ff2d2d;
+    border-radius:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#111;
+}
+
+@media(max-width:900px){
+    .hero h1{font-size:48px;}
+    nav ul{display:none;}
+    .menu-btn{display:block;}
+    section{padding:70px 20px;}
+    .search-box input{width:100%;}
+    .player-card{width:100%;}
+    table{display:block;overflow-x:auto;}
+    .gallery{grid-template-columns:1fr;}
+}
+
+@media(max-width:500px){
+    .hero h1{font-size:34px;}
+    .hero p{font-size:15px;}
+    .logo{font-size:22px;}
+    .btn,.btn2{padding:12px 24px;font-size:14px;}
+    section h2{font-size:28px;}
+}

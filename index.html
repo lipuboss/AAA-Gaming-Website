@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LIPU BOSS | Shadow of Uchiha</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+<div id="loader">
+  <div class="eye"></div>
+  <h2>SHADOW OF UCHIHA</h2>
+</div>
+
+<video autoplay muted loop id="bg-video">
+  <source src="videos/anime.mp4" type="video/mp4">
+</video>
+
+<div class="overlay"></div>
+
+<header>
+  <nav>
+    <div class="logo">👁️ LIPU BOSS</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#search">Player</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#leaderboard">Leaderboard</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="menu-btn"><i class="fa-solid fa-bars"></i></div>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <h4>WELCOME TO</h4>
+  <h1>SHADOW OF UCHIHA</h1>
+  <p>Anime Inspired Free Fire Gaming Experience</p>
+  <div class="hero-btns">
+    <a href="#search" class="btn">ENTER THE SHADOW</a>
+    <a href="#gallery" class="btn2">EXPLORE</a>
+  </div>
+</section>
+
+<section id="search">
+  <h2>🎮 Free Fire Player Search</h2>
+  <div class="search-box">
+    <input type="number" placeholder="Enter Free Fire UID" id="uid">
+    <button onclick="searchPlayer()"><i class="fa-solid fa-magnifying-glass"></i> SEARCH</button>
+  </div>
+
+  <div class="player-card">
+    <h3>Player Details</h3>
+    <p>Name: <span id="pname">--</span></p>
+    <p>UID: <span id="puid">--</span></p>
+    <p>Level: <span id="plevel">--</span></p>
+    <p>Rank: <span id="prank">--</span></p>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="box"><h2 class="counter" data-target="50000">0</h2><p>Players</p></div>
+  <div class="box"><h2 class="counter" data-target="2500">0</h2><p>Guilds</p></div>
+  <div class="box"><h2 class="counter" data-target="999">0</h2><p>Tournaments</p></div>
+  <div class="box"><h2 class="counter" data-target="100">0</h2><p>Countries</p></div>
+</section>
+
+<section id="gallery">
+  <h2>Premium Gallery</h2>
+  <div class="gallery">
+    <img src="images/1.jpg" alt="Gallery 1">
+    <img src="images/2.jpg" alt="Gallery 2">
+    <img src="images/3.jpg" alt="Gallery 3">
+    <img src="images/4.jpg" alt="Gallery 4">
+    <img src="images/5.jpg" alt="Gallery 5">
+    <img src="images/6.jpg" alt="Gallery 6">
+  </div>
+</section>
+
+<section id="leaderboard">
+  <h2>🏆 Top Players</h2>
+  <table>
+    <tr><th>Rank</th><th>Name</th><th>Level</th></tr>
+    <tr><td>1</td><td>LIPU BOSS</td><td>90</td></tr>
+    <tr><td>2</td><td>UCHIHA</td><td>88</td></tr>
+    <tr><td>3</td><td>SHADOW</td><td>85</td></tr>
+  </table>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <form>
+    <input type="text" placeholder="Your Name">
+    <input type="email" placeholder="Email">
+    <textarea placeholder="Message"></textarea>
+    <button type="submit">SEND</button>
+  </form>
+</section>
+
+<div id="musicBtn">🎵</div>
+
+<audio id="bgMusic" loop>
+  <source src="music/music.mp3" type="audio/mpeg">
+</audio>
+
+<footer>
+  <h3>LIPU BOSS</h3>
+  <p>Designed with ❤️ using HTML CSS JavaScript</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
